@@ -39,8 +39,8 @@ public class App
 			System.out.println(" - " + bucket.getName());
 		}
 		
-		// create folder into bucket
-		String folderName = "testfolder";
+		// create assets folder into bucket
+		String folderName = "assets";
 		createFolder(bucketName, folderName, s3client);
 		
 		// upload file to folder and set it to public
