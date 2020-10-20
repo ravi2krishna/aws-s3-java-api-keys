@@ -31,7 +31,7 @@ public class App
 		AmazonS3 s3client = new AmazonS3Client(credentials);
 		
 		// create bucket - name must be unique for all S3 users
-		String bucketName = "mylab-custom-youtube-videos";
+		String bucketName = "mylab-custom-bucket-876567";
 		s3client.createBucket(bucketName);
 		
 		// list buckets
@@ -44,9 +44,9 @@ public class App
 		createFolder(bucketName, folderName, s3client);
 		
 		// upload file to folder and set it to public
-		String fileName = folderName + SUFFIX + "video.mp4";
+		String fileName = folderName + SUFFIX + "file.txt";
 		s3client.putObject(new PutObjectRequest(bucketName, fileName, 
-				new File("/Users/ninja/Downloads/video.mp4"))
+				new File("/home/ec2-user/file.txt"))
 				.withCannedAcl(CannedAccessControlList.PublicRead));
 		
 		//deleteFolder(bucketName, folderName, s3client);
