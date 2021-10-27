@@ -35,9 +35,9 @@ public class App
 		s3client.createBucket(bucketName);
 		
 		// list buckets
-		for (Bucket bucket : s3client.listBuckets()) {
-			System.out.println(" - " + bucket.getName());
-		}
+		//for (Bucket bucket : s3client.listBuckets()) {
+		//	System.out.println(" - " + bucket.getName());
+		//}
 		
 		// create assets folder into bucket
 		String folderName = "assets";
