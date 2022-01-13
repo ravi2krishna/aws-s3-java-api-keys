@@ -22,10 +22,10 @@ public class App
     private static final String SUFFIX = "/";
 	
 	public static void main(String[] args) {
-		// credentials object identifying user for authentication
-		// user must have AWSConnector and AmazonS3FullAccess for 
-		// this example to work
-		AWSCredentials credentials = new BasicAWSCredentials("AKIAICO7OPDA5S76D6XA", "EvHeG8pXyJbAocnk17PmRFIUdB//5igfGQMnuJpy");
+		// credentials for authentication
+		// and AmazonS3FullAccess Policy for authorization
+		// this example will work
+		AWSCredentials credentials = new BasicAWSCredentials("ACCESS-KEY", "SECRET-KEY");
 		
 		// create a client connection based on credentials
 		AmazonS3 s3client = new AmazonS3Client(credentials);
